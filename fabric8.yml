@@ -1,0 +1,13 @@
+---
+pipeline: "workflows/django/CanaryReleaseStageAndApprovePromote/Jenkinsfile"
+buildName: "django-example"
+codeReview: true
+links:
+  Git: "https://github.com/demko/django-example"
+  Job: "http://jenkins.vagrant.f8/job/django-example"
+  Production: "http://172.30.254.78:80/kubernetes/pods?namespace=default-production"
+  Staging: "http://172.30.254.78:80/kubernetes/pods?namespace=default-staging"
+environments:
+  Staging: "default-staging"
+  Production: "default-production"
+useLocalFlow: true
